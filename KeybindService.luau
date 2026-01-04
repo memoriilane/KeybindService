@@ -1,4 +1,3 @@
--- START KeybindService.lua
 --[[
     File:        | KeybindService.luau
     Author:      | memoriilane
@@ -116,4 +115,3 @@ end
 --------------------------------------------------------------------------------------------------------------------------------
 
 return KeybindService
--- END KeybindService.lua
