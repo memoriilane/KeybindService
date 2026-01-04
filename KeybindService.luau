@@ -6,11 +6,7 @@
 ]]--
 --------------------------------------------------------------------------------------------------------------------------------
 
--- >> services & variables
-local UserInputService = game:GetService("UserInputService")
-
-local string_lower     = string.lower
-local string_format    = string.format
+-- # Important stuff
 
 local KeybindService   = {
 	IsRecording          = false,
@@ -26,6 +22,10 @@ local KeybindService   = {
 		["Left"]   = Enum.KeyCode.Left
 	}
 }
+
+local UserInputService = game:GetService("UserInputService")
+local string_lower     = string.lower
+local string_format    = string.format
 --------------------------------------------------------------------------------------------------------------------------------
 
 -- >> functions
