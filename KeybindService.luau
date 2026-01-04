@@ -25,9 +25,9 @@ local KeybindService   = {
 local UserInputService = game:GetService("UserInputService")
 local string_lower     = string.lower
 local string_format    = string.format
---------------------------------------------------------------------------------------------------------------------------------
 
--- >> functions
+-- # Main logic
+
 -- Checks if Key is reserved.
 --- @param key any
 --- @return boolean
