@@ -28,7 +28,7 @@ local string_format    = string.format
 
 -- # Main logic
 
--- Checks if Key is reserved.
+--- Checks if Key is reserved.
 --- @param key any
 --- @return boolean
 function KeybindService:IsKeyReserved(key): boolean
@@ -67,8 +67,12 @@ function KeybindService:BeginRecording(printToConsole: boolean)
 			return
 		end
 
-		self.LastKeyPressedObject = input;
-		(printToConsole and print)("KeybindService - ", input.KeyCode.Name)
+		self.LastKeyPressedObject = input
+
+		if (printToConsole) then
+			print("KeybindService - ", input.KeyCode.Name)
+		end
+
 		return self.RecordingConnection
 	end)
 end
@@ -100,15 +104,15 @@ function KeybindService:BindToKey(key, callback)
 end
 
 
----Terminates recording session.
----@return nil
+--- Terminates recording session.
+--- @return nil
 function KeybindService:StopRecording(): nil
 	self.RecordingConnection:Disconnect()
 end
 
 
----Returns whether or not KeybindService is still listening for keys.
----@return boolean isRecording
+--- Returns whether or not KeybindService is still listening for keys.
+--- @return boolean isRecording
 function KeybindService:IsRecording(): boolean
 	return self.IsRecording
 end
