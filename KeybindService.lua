@@ -90,13 +90,13 @@ function KeybindService:BindToKey(key, callback)
 		end
 
 		-- // handle if string character is passed
-		if ((typeof(key) == "string" and key) == (string.lower(input.KeyCode))) then
+		if (typeof(key) == "string") and (string.lower(key) == string.lower(input.KeyCode)) then
 			callback()
 			return
 		end
 
 		-- // handle if Enum KeyCode object is passed
-		if ((typeof(key) == "EnumItem" and key) == input) then
+		if (typeof(key) == "EnumItem") and (key == input) then
 			callback()
 			return
 		end
