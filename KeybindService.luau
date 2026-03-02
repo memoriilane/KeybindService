@@ -90,7 +90,7 @@ function KeybindService:BindToKey(key, callback)
 		end
 
 		-- // handle if string character is passed
-		if (typeof(key) == "string") and (string.lower(key) == string.lower(input.KeyCode)) then
+		if (typeof(key) == "string") and (string.lower(key) == string.lower(tostring(input.KeyCode))) then
 			callback()
 			return
 		end
